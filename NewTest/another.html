@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated GIF</title>
+    <style>
+        .gif {
+            display: none; /* Ẩn GIF ban đầu */
+            position: absolute; /* Đặt vị trí tuyệt đối để nằm trên nền của trang web */
+        }
+    </style>
+    <script>
+        // Đợi cho trang web tải xong
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy thẻ img chứa GIF
+            var gif = document.getElementById("gif");
+
+            // Hiển thị GIF sau một khoảng thời gian
+            setTimeout(function() {
+                gif.style.display = "block";
+            }, 2000); // Thời gian hiển thị GIF (ở đây là 2 giây)
+
+            // Biến mất GIF sau một khoảng thời gian
+            setTimeout(function() {
+                gif.style.display = "none";
+            }, 4000); // Thời gian biến mất GIF (ở đây là 4 giây)
+        });
+    </script>
+</head>
+<body>
+    <img id="gif" class="gif" src="https://herta.eu.org/img/hertaa1.webp" alt="Animated GIF">
+</body>
+</html>
